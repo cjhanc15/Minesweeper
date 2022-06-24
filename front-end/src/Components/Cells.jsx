@@ -22,11 +22,14 @@ class Cell extends React.Component {
       "cell" +
       (value.isRevealed ? "" : " hidden") +
       (value.isMine ? " is-mine" : "") +
-      (value.isFlagged ? " is-flag" : "");
+      (value.isFlagged ? " is-flag" : "") +
+      (value.isRevealed && value.isMine ? " is-mine-and-revealed" : "");
 
     return (
-      <div onClick={onClick} className={className} onContextMenu={cMenu}>
-        {this.getValue()}
+      <div className='cellBody'>
+        <div onClick={onClick} className={className} onContextMenu={cMenu}>
+          {this.getValue()}
+        </div>
       </div>
     );
   }
