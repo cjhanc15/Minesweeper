@@ -61,8 +61,8 @@ body {
 }
 
 .cell.is-flag {
-  background: #ff005d;
+  background: #8f56a3;
 }
 .cell.is-mine-and-revealed {
-  background: #ff005d;
+  background: #8f56a3;
 }
